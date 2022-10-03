@@ -1,0 +1,33 @@
+extends ./layout/index
+
+block slider 
+    .slider 
+        h1 Rio de janeir 
+        em aventura
+
+block contenido
+    main.container.mt-5
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit enim sit amet ex vehicula dignissim. Vestibulum porttitor purus diam, sed tincidunt metus mattis at. Mauris nec sapien in felis semper interdum eu sit amet dui. Proin mollis a orci non interdum. Praesent tincidunt nec turpis non viverra. Vestibulum lobortis pulvinar magna, eu gravida mauris 
+                p Nullam eu porta purus. Morbi odio erat, maximus vel nunc sit amet, dignissim bibendum libero. Curabitur ut urna dictum, gravida orci vel, pretium nisi. Nullam luctus a dolor vel lobortis. Sed efficitur aliquam felis, nec laoreet arcu condimentum a. Donec ut vehicula justo. Vestibulum est ex, scelerisque id tempus eget, pulvinar ac odio. Nulla lectus justo, cursus a vehicula ut
+
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros",  class="img-fluid")
+            
+        include ./layout/bloque_viajes
+    
+    .descuento 
+        .container
+            .row    
+                .col-md-6 
+                    .contenido 
+                        h3 %% de descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 de Marzo de 2022 -28 de marzo de 2022
+                        p.precio $2,500 USD
+    
+    .container
+        h2.mt-5.text-center Testimoniale
+        include ./layout/bloque_testimoniales
