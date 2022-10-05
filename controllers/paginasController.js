@@ -1,5 +1,5 @@
 import { Viaje } from "../models/Viaje.js";
-import { Testimonial } from "../models/testimoniales.js";
+import { Testimonial } from "../models/Testimoniales.js";
 
 const paginaInicio = async (req, res) => {
     //consultar 3 viajes del modelo viaje
