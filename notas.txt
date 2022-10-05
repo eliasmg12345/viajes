@@ -1,0 +1,67 @@
+mysql://b358d52d60331d:fad1b56c@us-cdbr-east-06.cleardb.net/heroku_a43668e386bb1a6?reconnect=true
+
+tener los path configurados y listos:
+git 
+git user
+heroku
+mysql
+node
+
+
+
+
+para llevar a heroku
+
+npm i dotenv
+y esto importar o require en el database.js
+
+crear un .env con los datos de la bd
+(HOST=localhost)
+
+editar en el index.js
+ app.listen(port,host , ()=>{})
+
+en el package.json editar en el scripts
+ dev: nodemon index.js
+ starts: node index.js
+
+crear el repositorio en git
+
+adicionar un archivo .gitignore
+(node_modules
+variables.env)
+
+subir todo a git add .
+
+HEROKU============
+
+tener instalado el CLI de jeroku
+
+en la ubicacion del proyecto ejecutar:
+heroku create --remote production
+
+ahora podremos hacer el push en la direccion que nos los creo con:
+git push production master
+
+tener el MYSQL en heroku
+
+te habilitara una URL
+
+....AHORA SI TUVIERas un .dump de tu bd tienes que exportar con:
+
+mysqldump -u root -p <bd> > <bd.sql>
+
+para obtner la config de heroku ejecutamos:
+heroku config | grep CLEARDB_DATABASE_URL
+
+==levando la bd local al config de heroku
+
+mysql -u <user heroku> -h <host heroku> -p <bd_heroku> < <bd.sql>
+
+añadiendo los .env por consola:
+heroku config:set BD_NOMBRE= <bd_heroku>
+
+o puedes hacerlo directamente en la pagina
+....
+
+
